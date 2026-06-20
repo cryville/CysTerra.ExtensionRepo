@@ -1,0 +1,16 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cysterra-extension-repo",
+	"compatibility_date": "2026-06-18",
+	"assets": {
+		"directory": "./public",
+		"not_found_handling": "404-page"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"upload_source_maps": true,
+	"compatibility_flags": [
+		"nodejs_compat"
+	]
+}
