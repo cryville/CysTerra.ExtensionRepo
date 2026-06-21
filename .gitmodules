@@ -1,0 +1,3 @@
+[submodule "CysTerra.Interfaces"]
+	path = CysTerra.Interfaces
+	url = https://github.com/cryville/CysTerra.Interfaces.git
