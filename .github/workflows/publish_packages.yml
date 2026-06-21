@@ -39,6 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: out/public
+          include-hidden-files: true
       - name: Cache repo
         uses: actions/cache/save@v5
         with:
