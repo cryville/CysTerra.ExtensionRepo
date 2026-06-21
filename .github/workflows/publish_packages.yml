@@ -1,0 +1,59 @@
+name: Publish packages
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+      - name: Setup .NET 8.x
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.x
+      - name: Build repo generator
+        run: dotnet build Cryville.EEW.ExtensionRepo -c Release
+      - name: Restore cached repo
+        id: cache-repo-restore
+        uses: actions/cache/restore@v5
+        with:
+          path: out
+          key: repo
+      - name: Generate repo
+        run: dotnet ./Cryville.EEW.ExtensionRepo/bin/Release/net8.0/Cryville.EEW.ExtensionRepo.dll
+      - name: Deploy to Cloudflare with Wrangler
+        uses: cloudflare/wrangler-action@v3
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: out
+      - name: Upload Pages artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: out/public
+      - name: Cache repo
+        uses: actions/cache/save@v5
+        with:
+          path: out
+          key: ${{ steps.cache-repo-restore.outputs.cache-primary-key }}
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
