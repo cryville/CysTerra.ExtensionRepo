@@ -243,6 +243,11 @@ namespace Cryville.EEW.ExtensionRepo {
 				foreach (var culture in availableCultures) {
 					var metadataCulture = culture;
 					var metadataValue = localizableMetadataAttribute.GetLocalizedValue(ref metadataCulture);
+					string metadataCultureName = metadataCulture.Name;
+					if (collection.Contains(metadataCultureName)) {
+						Trace.TraceWarning("Duplicate cultures for {0}. Probably missing strings.", localizableMetadataAttribute);
+						continue;
+					}
 					collection.Add(new(metadataCulture.Name, metadataValue));
 				}
 				return collection;
