@@ -145,7 +145,7 @@ namespace Cryville.EEW.ExtensionRepo {
 			var depsContext = depsFileReader.Read(depsFileStream);
 			var referencedAssemblies = extensionInfo.ReferencedAssemblies;
 			var dependencies = new DependencyInfoCollection();
-			foreach (var d in depsContext.RuntimeLibraries.Single(l => l.Type == "project").Dependencies) {
+			foreach (var d in depsContext.RuntimeLibraries.Single(l => l.Name == packageName).Dependencies) {
 				if (referencedAssemblies.SingleOrDefault(a => a.Name == d.Name) is { } referencedAssembly) {
 					dependencies.Add(new(
 						referencedAssembly.Name ?? throw new InvalidOperationException("Unexpected reference to an unnamed assembly."),
