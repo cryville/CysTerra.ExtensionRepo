@@ -10,7 +10,7 @@
       "Cryville.EEW.Wolfx.TTS/0.8.7": {
         "dependencies": {
           "Cryville.EEW.TTS": "0.8.1",
-          "Cryville.EEW.Wolfx": "0.8.7"
+          "Cryville.EEW.Wolfx": "0.8.10"
         },
         "runtime": {
           "Cryville.EEW.Wolfx.TTS.dll": {}
