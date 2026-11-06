@@ -1,0 +1,27 @@
+{
+	"Culture": "zh-CN",
+	"Strings": {
+		"$ExtensionDesc": "用于生成 Jian Project API 语音消息的组件。",
+		"$ExtensionName": "Jian Project TTS组件",
+		"TitleBulletin": "地震信息",
+		"TitleCancel": "取消报",
+		"TitleEew": "地震预警",
+		"TitleJmaEewForecast": "紧急地震速报（预报）",
+		"TitleJmaEewWarning": "紧急地震速报（警报）",
+		"TitleOther": "灾害情报",
+		"TitleTsunami": "海啸情报",
+		"TitleTsunamiCancel": "海啸情报解除",
+		"TitleWeather": "气象预警",
+		"TtsDepth": "，深度{0}千米",
+		"TtsDetail": "，{0}",
+		"TtsIntensity": "，最大震度{0}",
+		"TtsLead": "{0}",
+		"TtsMagnitude": "，震级{0}",
+		"TtsPlace": "，{0}",
+		"TtsRepeatTitle": "地震情报",
+		"TitleReport": "地震报告",
+		"TypeAutomatic": "自动测定",
+		"TypeReviewed": "正式测定",
+		"TtsCencType": "，{0}"
+	}
+}
