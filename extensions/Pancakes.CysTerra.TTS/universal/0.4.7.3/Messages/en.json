@@ -1,0 +1,17 @@
+{
+	"Culture": "en",
+	"Strings": {
+		"$ExtensionDesc": "Component that generates PancakesAPI voice messages.",
+		"$ExtensionName": "PancakesAPI TTS",
+		"ComponentName": "PancakesAPI (GlobalQuake)",
+		"Title": "Detected",
+		"TitleArchived": "Archived",
+		"TitleCanceled": "Canceled",
+		"TtsDepth": ", depth {0} kilometers",
+		"TtsIntensity": ", maximum intensity {0}",
+		"TtsLead": "",
+		"TtsMagnitude": ", magnitude {0}",
+		"TtsPlace": ", {0}",
+		"TtsRepeatTitle": "Earthquake info"
+	}
+}
