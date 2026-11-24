@@ -1,0 +1,7 @@
+{
+	"Culture": "en",
+	"Strings": {
+		"$ExtensionDesc": "Component that generates Jian Project API event details.",
+		"$ExtensionName": "Jian Project features"
+	}
+}

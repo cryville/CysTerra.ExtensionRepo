@@ -1,0 +1,27 @@
+{
+	"Culture": "en",
+	"Strings": {
+		"$ExtensionDesc": "Component that generates Jian Project API voice messages.",
+		"$ExtensionName": "Jian Project TTS",
+		"TitleBulletin": "Earthquake information. ",
+		"TitleCancel": "Cancellation. ",
+		"TitleEew": "Earthquake early warning. ",
+		"TitleJmaEewForecast": "Earthquake Early Warning (Forecast). ",
+		"TitleJmaEewWarning": "Earthquake Early Warning (Warning). ",
+		"TitleOther": "Hazard report. ",
+		"TitleTsunami": "Tsunami information. ",
+		"TitleTsunamiCancel": "Tsunami cancellation. ",
+		"TitleWeather": "Weather warning. ",
+		"TtsDepth": ", depth {0} kilometers",
+		"TtsDetail": ", {0}",
+		"TtsIntensity": ", maximum intensity {0}",
+		"TtsLead": "{0} ",
+		"TtsMagnitude": ", magnitude {0}",
+		"TtsPlace": ", {0}",
+		"TtsRepeatTitle": "Earthquake info",
+		"TitleReport": "Earthquake report. ",
+		"TypeAutomatic": "automatic determination",
+		"TypeReviewed": "reviewed determination",
+		"TtsCencType": ", {0}"
+	}
+}

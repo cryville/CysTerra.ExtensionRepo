@@ -1,0 +1,7 @@
+{
+	"Culture": "zh-Hant",
+	"Strings": {
+		"$ExtensionDesc": "用於生成 Jian Project API 事件詳情的元件。",
+		"$ExtensionName": "Jian Project事物元件"
+	}
+}
